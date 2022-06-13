@@ -1,15 +1,11 @@
-// This Source Code Form is subject to the terms of the Mozilla Public
-// License, v. 2.0. If a copy of the MPL was not distributed with this
-// file, You can obtain one at https://mozilla.org/MPL/2.0/.
-
-#ifndef PLYWOOD_STD_HPP
-#define PLYWOOD_STD_HPP
+#ifndef PLYWOOT_STD_HPP
+#define PLYWOOT_STD_HPP
 
 #include <cstring>
 #include <sstream>
 #include <string>
 
-namespace plywood
+namespace plywoot
 {
   namespace pstd
   {

@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(plywood
+project(plywoot
   VERSION 0.0.1
   LANGUAGES CXX
-  HOMEPAGE_URL "https://github.com/ton/plywood"
+  HOMEPAGE_URL "https://github.com/ton/plywoot"
   DESCRIPTION "C++11 header-only PLY I/O library"
 )
 
@@ -21,14 +21,14 @@ set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 add_compile_options("$<$<CONFIG:DEBUG>:-Wall;-Wextra;-Wshadow;-Wno-unused-variable;-Wno-unused-function;-Wno-unused-parameter;-Werror;-Wstrict-overflow;-fno-strict-aliasing;-march=native>")
 add_compile_options("$<$<CONFIG:RELEASE>:-Wall;-Wextra;-Wshadow;-Wpedantic;-Werror;-Wno-unused-parameter;-Wstrict-overflow;-fno-strict-aliasing;-march=native>")
 
-# Define the header-only library target for plywood.
-add_library(plywood INTERFACE)
-target_include_directories(plywood
+# Define the header-only library target for plywoot.
+add_library(plywoot INTERFACE)
+target_include_directories(plywoot
   INTERFACE
   $<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/include>
   $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
 )
-target_compile_features(plywood INTERFACE cxx_std_11)
+target_compile_features(plywoot INTERFACE cxx_std_11)
 
 add_subdirectory(test)
 
@@ -46,13 +46,13 @@ if(NOT TARGET uninstall)
 endif()
 
 # Create installation targets (because of `INSTALL_INTERFACE` above, headers are automatically included.
-install(TARGETS plywood
+install(TARGETS plywoot
   EXPORT ${PROJECT_NAME}_Targets
 )
 
 # Install a CMake config and version file.
 include(CMakePackageConfigHelpers)
-write_basic_package_version_file("plywoodConfigVersion.cmake" VERSION ${PROJECT_VERSION} COMPATIBILITY SameMajorVersion)
+write_basic_package_version_file("plywootConfigVersion.cmake" VERSION ${PROJECT_VERSION} COMPATIBILITY SameMajorVersion)
 configure_package_config_file(
   "${PROJECT_SOURCE_DIR}/cmake/${PROJECT_NAME}Config.cmake.in"
   "${PROJECT_BINARY_DIR}/${PROJECT_NAME}Config.cmake"
@@ -73,4 +73,4 @@ install(
 )
 
 # Install header directory.
-install(DIRECTORY ${PROJECT_SOURCE_DIR}/include/plywood DESTINATION include)
+install(DIRECTORY ${PROJECT_SOURCE_DIR}/include/plywoot DESTINATION include)

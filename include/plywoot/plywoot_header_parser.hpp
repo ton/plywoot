@@ -1,20 +1,16 @@
-// This Source Code Form is subject to the terms of the Mozilla Public
-// License, v. 2.0. If a copy of the MPL was not distributed with this
-// file, You can obtain one at https://mozilla.org/MPL/2.0/.
+#ifndef PLYWOOT_HEADER_PARSER_HPP
+#define PLYWOOT_HEADER_PARSER_HPP
 
-#ifndef PLYWOOD_HEADER_PARSER_HPP
-#define PLYWOOD_HEADER_PARSER_HPP
-
-#include "plywood_exceptions.hpp"
-#include "plywood_header_scanner.hpp"
-#include "plywood_header_scanner_ios.hpp"
-#include "plywood_std.hpp"
+#include "plywoot_exceptions.hpp"
+#include "plywoot_header_scanner.hpp"
+#include "plywoot_header_scanner_ios.hpp"
+#include "plywoot_std.hpp"
 
 #include <cstdint>
 #include <string>
 #include <vector>
 
-namespace plywood
+namespace plywoot
 {
   enum class PlyDataType
   {

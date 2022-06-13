@@ -4,7 +4,7 @@ find_package(Catch2 3 REQUIRED)
 add_executable(tests main.cpp)
 target_link_libraries(tests
   PRIVATE
-  plywood
+  plywoot
   Catch2::Catch2WithMain
 )
 
@@ -13,5 +13,5 @@ target_link_libraries(tests
 add_executable(test-cpp11 test-cpp11.cpp)
 target_link_libraries(test-cpp11
   PRIVATE
-  plywood
+  plywoot
 )

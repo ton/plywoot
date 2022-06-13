@@ -1,13 +1,9 @@
-// This Source Code Form is subject to the terms of the Mozilla Public
-// License, v. 2.0. If a copy of the MPL was not distributed with this
-// file, You can obtain one at https://mozilla.org/MPL/2.0/.
-
-#ifndef PLYWOOD_HEADER_SCANNER_IOS_HPP
-#define PLYWOOD_HEADER_SCANNER_IOS_HPP
+#ifndef PLYWOOT_HEADER_SCANNER_IOS_HPP
+#define PLYWOOT_HEADER_SCANNER_IOS_HPP
 
 #include <ostream>
 
-namespace plywood
+namespace plywoot
 {
   std::ostream &operator<<(std::ostream &os, HeaderScanner::Token t)
   {
